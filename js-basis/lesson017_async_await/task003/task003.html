@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task003</title>
+    <script src="task003.js" defer></script>
+</head>
+
+<body>
+    <pre style="font-size: 1rem;">
+        Вам необходимо создать функцию renderAlbums(), которая будет отображать 
+        данные об альбомах в DOM-дереве. Для получения данных используйте 
+        следующий url: «https://jsonplaceholder.typicode.com/albums»
+
+        HTML-шаблон для элемента альбома выглядит следующим образом:
+
+        &lt;li&gt;название альбома&lt;/li&gt;
+        Итоговые HTML-элементы c информацией об имени альбома поместите в тег 
+        &lt;ol&gt; с классом, равным "data-container".
+
+        Для удобства необходимо добавить элемент &lt;span&gt; с текстом «Загрузка...» 
+        перед загрузкой альбомов, и спрятать этот элемент после загрузки данных.
+
+        Используйте исключительно async/await и try...catch...finally. Если при 
+        загрузке альбомов произошла ошибка, то внутрь тега с классом равным 
+        "data-container" поместите текст: «Произошла ошибка в получении данных 
+        об альбомах...».
+    </pre>
+
+</html>

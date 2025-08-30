@@ -1,0 +1,13 @@
+body {
+    background: black;
+    padding: 50px;
+}
+
+h1 {
+    color: white;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}

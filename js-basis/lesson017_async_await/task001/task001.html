@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task001</title>
+    <script src="task001.js" defer></script>
+</head>
+<body>
+    <pre style="font-size: 1rem;">
+        Требуется переписать данный код, использующий .then(), .catch() и 
+        .finally() в код, который использует исключительно async/await. 
+        и try...catch...finally:
+
+        const POSTS_URL = "https://jsonplaceholder.typicode.com/posts";
+        let isLoading = false;
+        const createNewPost = () => {
+        isLoading = true;
+        fetch(POSTS_URL, {
+            method: "POST"
+        })
+            .then((response) => response.json())
+            .then((result) => {
+            console.log("result", result);
+            })
+            .catch((error) => {
+            console.log("error", error);
+            })
+            .finally(() => {
+            isLoading = false;
+            });
+        };
+        createNewPost();
+    </pre>
+</body>
+</html>

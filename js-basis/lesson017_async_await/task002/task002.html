@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task002</title>
+    <link rel="stylesheet" href="task003.css">
+    <script src="task002.js" defer></script>
+</head>
+<body>
+    <pre style="font-size: 1rem">
+        Требуется переписать данный код, использующий .then() и .catch(), 
+        в код, который использует исключительно async/await и try...catch:
+
+        const TODOS_URL = 'https://jsonplaceholder.typicode.com/todos';
+        const getTodosByIds = (ids) => {
+        const requests = ids.map((id) => fetch(`${TODOS_URL}/${id}`));
+        Promise.all(requests)
+            .then((responses) => {
+            const dataResults = responses.map((data) => data.json());
+            return Promise.all(dataResults)
+            })
+            .then((allTasks) => {
+            console.log(allTasks);
+            })
+            .catch((error) => {
+            console.log(error);
+            })
+        }
+        getTodosByIds([43, 21, 55, 100, 10]);
+    </pre>
+
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task001</title>
+    <script src="task001.js" defer></script>
+</head>
+<body>
+    <pre style="font-size: 1rem;">
+        Напишите, в каком порядке будет выводиться информация в консоль. Не вызывайте код, попробуйте самостоятельно написать правильный ответ на листочке либо в заметках.
+
+        setTimeout(() => {
+            console.log('setTimeout');
+            }, 0);
+        const promise = new Promise((resolve) => {
+            console.log('Promise');
+            resolve();
+            });
+        promise.then(() => {
+            console.log('Promise resolve');
+            });
+        console.log('End');
+    </pre>
+</body>
+</html>
