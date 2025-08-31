@@ -7,7 +7,7 @@ import livereload from "rollup-plugin-livereload";
 
 export default {
 	input: "./index.js",
-	output: { file: "./dist/bundle.js", format: "cjs" },
+	output: { file: "./target/bundle.js", format: "cjs" },
 	plugins: [
 		styles(),
 		image(),
