@@ -196,7 +196,7 @@ npm start
 ```
 [commit задачи 2](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/17f8fcc97587753e82ad72f076f01b9663df58b9)
 
-Так как .gitignore фильтрует директорию для сборки `/dist`, сделаем дополнительный комит, в который попадт файлы сборки. Для этого изменим конфигуурацию rollup:
+Так как .gitignore фильтрует директорию для сборки `/dist`, сделаем дополнительный комит, в который попадут файлы сборки. Для этого изменим конфигурацию rollup:
 
 ```mjs
 ...
@@ -217,3 +217,4 @@ npm start
 ```sh
 git add -A; git commit -am"added output bundle to the repo"; git push origin main
 ```
+[дополнительный commit](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/8f3cf2bb138cb7937dd96933fd879571ad4f9374)
