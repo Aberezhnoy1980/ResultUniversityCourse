@@ -1,0 +1,16 @@
+{
+  "name": "lesson019_hw_part_2",
+  "version": "1.0.0",
+  "description": "## Хронология разработки",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
+  }
+}
