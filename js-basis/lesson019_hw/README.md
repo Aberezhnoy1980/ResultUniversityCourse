@@ -177,7 +177,7 @@ export default {
 };
 ```
 
-5. Модифицируем свойство "script" файла конфигурации package.json для автоматизации сборки и запуска:
+1. Модифицируем свойство "script" файла конфигурации package.json для автоматизации сборки и запуска:
 
 ```json
 ...
@@ -193,4 +193,27 @@ export default {
 
 ```sh
 npm start
+```
+[commit задачи 2](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/17f8fcc97587753e82ad72f076f01b9663df58b9)
+
+Так как .gitignore фильтрует директорию для сборки `/dist`, сделаем дополнительный комит, в который попадт файлы сборки. Для этого изменим конфигуурацию rollup:
+
+```mjs
+...
+
+export default {
+	...,
+	output: { file: "./target/bundle.js", format: "cjs" },
+	...
+};
+```
+
+Пересоберем проект и сделаем комит:
+
+```sh
+npm start
+```
+
+```sh
+git add -A; git commit -am"added output bundle to the repo"; git push origin main
 ```
