@@ -259,3 +259,4 @@ npm start
 ```shell
 git add -A; git commit -am"webpack configured"; git push origin main
 ```
+[commit задачи 2](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/c94e595758764be119f27cf40657a17a30f0e61f)
