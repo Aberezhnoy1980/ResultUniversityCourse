@@ -44,9 +44,10 @@ export class Form extends Component {
 		this.state.amount = event.target.value;
 		// console.log(this.isValid());
 
-		this.isValid()
-			? (this.$buttonElement.disabled = false)
-			: (this.$buttonElement.disabled = true);
+		// this.isValid()
+		// 	? (this.$buttonElement.disabled = false)
+		// 	: (this.$buttonElement.disabled = true);
+		this.$buttonElement.disabled = !this.isValid()
 	}
 
 	handleSubmit(event) {
