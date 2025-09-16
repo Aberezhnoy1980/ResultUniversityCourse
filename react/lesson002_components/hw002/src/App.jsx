@@ -21,11 +21,14 @@ function App() {
 		}
 	};
 
+	function addItem() {
+		const date = Date.now();
+		setlist((list) => [...list, { id: date, value: value }]);
+	}
+
 	const onAddButtonClick = () => {
 		if (isValueValid) {
-			const date = Date.now();
-			const updatedList = [...list, { id: date, value: value }];
-			setlist(updatedList);
+			addItem();
 			setValue('');
 		}
 	};
