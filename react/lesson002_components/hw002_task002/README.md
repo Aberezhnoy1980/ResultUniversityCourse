@@ -40,10 +40,27 @@ npm install gh-pages --save-dev
 * **Добавьте скрипт**. Далее нам необходимо добавить новый npm скрипт в ​​​<em style="color: #EB5757;">​package.json​​​</em>​. С помощью него, мы будем выгружать наше приложение на хостинг.
 
 ```json
-"deploy": "gh-pages -d build"
+"deploy": "gh-pages -d dist -b gh-pages-dumplings-guide -v \"**/.*\""
 ```
 
 \- где <em style="color: #EB5757;">build</em> название директории с выходным бандлом
+
+\- <em style="color: #EB5757;">-b gh-pages-dumplings-guide</em> название ветки для деплоя (по умолчанию gh-pages и она занята)
+
+\-  <em style="color: #EB5757;">--v \"**/.*\"</em> удаление из директории репозиотрия для развертывания точечных файлов. При определенных обстоятельствах этот флаг необходимо убирать
+
+* **Добавить путь.** Необходимо добавить базовый путь для dev-сервера (пустая строка или ./ (для встроенного развертывания)):
+
+```js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
+// https://vite.dev/config/
+export default defineConfig({
+	plugins: [react()],
+	base: './',  // <-
+});
+```
 
 * **Добавьте homepage** Далее также в файле ​​​<em style="color: #EB5757;">​package.json​​​</em>​ нужно добавить ​​​<em style="color: #EB5757;">​homepage</em>​​​​
 **username** - имя пользователя на GitHub, **repository** - название репозитория:
