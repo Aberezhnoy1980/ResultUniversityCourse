@@ -40,12 +40,14 @@ npm install gh-pages --save-dev
 * **Добавьте скрипт**. Далее нам необходимо добавить новый npm скрипт в ​​​<em style="color: #EB5757;">​package.json​​​</em>​. С помощью него, мы будем выгружать наше приложение на хостинг.
 
 ```json
-"deploy": "gh-pages -d dist -b gh-pages-dumplings-guide -v \"**/.*\""
+"deploy": "gh-pages -d dist -e current_task -b gh-pages-dumplings-guide -v \"**/.*\""
 ```
 
-\- где <em style="color: #EB5757;">build</em> название директории с выходным бандлом
+\- где <em style="color: #EB5757;">dist</em> название директории с выходным бандлом. В случае конфликта с .gitignore можно конфигурировать в нстройках сборщика
 
-\- <em style="color: #EB5757;">-b gh-pages-dumplings-guide</em> название ветки для деплоя (по умолчанию gh-pages и она занята)
+\-  <em style="color: #EB5757;">-e current_task</em> директория назначения относительно корня. Текущая система предусматривает использование вложенных директорий для одного развернутого сайта для одного репозитория. Github pages имеет ограничения
+
+\- <em style="color: #EB5757;">-b gh-pages-dumplings-guide</em> название ветки для деплоя (по умолчанию gh-pages)
 
 \-  <em style="color: #EB5757;">--v \"**/.*\"</em> удаление из директории репозиотрия для развертывания точечных файлов. При определенных обстоятельствах этот флаг необходимо убирать
 
@@ -69,15 +71,23 @@ export default defineConfig({
 "homepage": "https://<username>.github.io/<repository>/"
 ```
 
-* **Выполните deploy** И теперь нам остается сделать deploy. Выполним команду:
+Для сборки vite этот шаг не обязателен
+
+* **Выполните build**:
 
 ```shell
 npm run build
 ```
 
-* **Выполните deploy** И теперь нам остается сделать ​​​​deploy​​​​. Выполним команду:
+* **Выполните deploy**:
 ```shell
 npm run deploy
 ```
 
-* **Готово!** Проект доступен по адресу, указанному в homepage в package.json https://\<username\>.github.io/\<repository\>/
+* **или**
+
+```shell
+npm run build && npm run deploy
+```
+
+* **Готово!** Проект доступен по адресу, указанному в homepage в package.json https://\<username\>.github.io/\<repository\>/current_task
