@@ -1,36 +1,31 @@
 import { useState } from 'react';
+import { formatDate } from './utils/formatDate';
 import styles from './App.module.css';
-import moment from 'moment';
 
 function App() {
 	const [value, setValue] = useState('');
-	const [list, setlist] = useState([]);
+	const [list, setList] = useState([]);
 	const [error, setError] = useState('');
-	const [isValueValid, setIsValueValid] = useState(false);
 
 	const onInputButtonClick = () => {
 		const promptValue = prompt('Введите значение');
 
-		if (promptValue.length < 3) {
-			setIsValueValid(false);
-			setError('Введенное значение должно содержать минимум 3 символа');
-		} else {
-			setIsValueValid(true);
+		if (promptValue?.length >= 3) {
 			setValue(promptValue);
 			setError('');
+		} else {
+			setError('Введенное значение должно содержать минимум 3 символа');
 		}
 	};
 
 	function addItem() {
-		const date = Date.now();
-		setlist((list) => [...list, { id: date, value: value }]);
+		const newItem = { id: Date.now(), value, createdAt: formatDate(new Date()) };
+		setList((list) => [...list, newItem]);
 	}
 
 	const onAddButtonClick = () => {
-		if (isValueValid) {
-			addItem();
-			setValue('');
-		}
+		addItem();
+		setValue('');
 	};
 
 	const emptyListMsg = (
@@ -39,12 +34,12 @@ function App() {
 
 	const listRender = (
 		<ul className={styles.list}>
-			{list.map((item) => (
-				<li key={item.id} className={styles['list-item']}>
-					{item.value}{' '}
+			{list.map(({ id, value, createdAt }) => (
+				<li key={id} className={styles['list-item']}>
+					{value}{' '}
 					<span className={styles['list-item-date']}>
 						(created at&nbsp;
-						{moment(item.id).format('DD.MM.YYYY HH:mm:ss')})
+						{createdAt})
 					</span>
 				</li>
 			))}
@@ -65,7 +60,7 @@ function App() {
 				</button>
 				<button
 					className={styles.button}
-					disabled={!isValueValid}
+					disabled={!value}
 					onClick={onAddButtonClick}
 				>
 					Добавить в список
