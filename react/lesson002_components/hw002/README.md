@@ -1,12 +1,136 @@
-# React + Vite
+# [Задание #1](https://aberezhnoy1980.github.io/ResultUniversityCourse/input_value/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+В данном задании мы совместно разработаем приложение и закрепим базовые концепции React. Вам дана готовая верстка: ссылка.
 
-Currently, two official plugins are available:
+С помощью React ее необходимо оживить, чтобы по итогу получилось следующее приложение:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img class=" lazyloaded" src="https://fs20.getcourse.ru/fileservice/file/download/a/177331/sc/376/h/9adf4914ce2e1e62bea4c4c7c1e900cc.gif">
 
-## Expanding the ESLint configuration
+### Функциональные требования по работе приложения:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* при нажатии на кнопку **Ввести новое** происходит запрос значения у пользователя с помощью <em style="color: #EB5757;">prompt()</em>;
+* значение должно состоять минимум из трех символов;
+* в случае если было введено менее 3 символов, на экране появляется сообщение с ошибкой;
+* если же было введено корректное значение, оно появляется на экране (в кавычках под заголовком);
+* если после этого еще раз нажать на кнопку **Ввести новое**, то снова произойдет запрос значения по правилам, описанным выше;
+* если нажать на кнопку **Добавить в список**, то текущее введенное значение добавится в список ниже, а также удалится из кавычек под заголовком;
+* кнопка **Добавить в список** заблокирована, если значение содержит менее 3 символов;
+* если в списке нет ни одного элемента, то показываем сообщение **Нет добавленных элементов**.
+
+### Шаги по реализации:
+
+**Шаг 1. Подготовьте стартовый React-проект**. В качестве стартового проекта используйте шаблон приложения, который мы подготовили в первом уроке (с настроенными ESLint, Prettier и EditorConfig).
+
+**Шаг 2. Перенесите верстку в React-компонент**. В файле <em style="color: #EB5757;">index.html</em> найдите элемент с классом <em style="color: #EB5757;">app</em> и перенесите его (включая все дочерние теги) в React-компонент <em style="color: #EB5757;">App</em>. Помните о том, что в React-компонентах вместо <em style="color: #EB5757;">class</em> используется <em style="color: #EB5757;">className</em>.
+
+Далее перенесите стили из файла <em style="color: #EB5757;">style.css</em> в файл <em style="color: #EB5757;">app.module.css</em>, а также часть в корневые стили — файл <em style="color: #EB5757;">index.css</em> (часть, относящуюся к глобальным стилям). Затем в JSX-разметке компонента <em style="color: #EB5757;">App</em> замените обычные CSS-классы на классы CSS-модуля. Обратите внимание, если название класса написано через -, то использовать его можно следующим образом — <em style="color: #EB5757;">className={styles['page-heading']}</em>.
+
+После этого убедитесь, что на странице выводится стилизованная разметка приложения (только верстка, без интерактива).
+
+**Шаг 3. Создайте состояния**. С помощью <em style="color: #EB5757;">useState()</em> определите в приложении 3 состояния:
+
+* <em style="color: #EB5757;">value</em> — будет использоваться для ввода значения, по умолчанию пустая строка;
+* <em style="color: #EB5757;">list</em> — будет содержать элементы списка, по умолчанию пустой массив;
+* <em style="color: #EB5757;">error</em> — будет хранить текст ошибки, по умолчанию пустая строка.
+
+**Шаг 4. Добавьте первый обработчик**. В компоненте создайте функцию <em style="color: #EB5757">onInputButtonClick()</em> и добавьте ее как обработчик клика на кнопку Ввести новое. Внутри функции запросите ввод значения с помощью <em style="color: #EB5757">prompt()</em> и выведите полученное значение в консоль. Убедитесь, что данный функционал работает.
+
+**Шаг 5. Вывод значения на экран**. Внутри функции <em style="color: #EB5757;">onInputButtonClick()</em> полученное из <em style="color: #EB5757;">prompt()</em> значение сохраните в обычную переменную <em style="color: #EB5757;">promptValue</em>. Далее в функцию <em style="color: #EB5757;">setValue()</em> (получена из <em style="color: #EB5757;">useState()</em> при создании состояния <em style="color: #EB5757;">value</em>) передайте новое значение для <em style="color: #EB5757;">value</em> — переменную <em style="color: #EB5757;">promptValue</em>.
+
+Теперь нам останется вывести <em style="color: #EB5757;">value</em> на экран. Найдите место в JSX-разметке (тег <em style="color: #EB5757;">\<output\></em>) и выведите <em style="color: #EB5757;">value</em> внутрь него. Теперь убедитесь, что после ввода <em style="color: #EB5757;">value</em> значение появляется на экране.
+
+**Шаг 6. Валидация**. После ввода значения <em style="color: #EB5757;">promptValue</em> внутри функции <em style="color: #EB5757;">onInputButtonClick()</em>, добавьте проверку, что строка <em style="color: #EB5757;">promptValue</em> содержит минимум 3 символа.
+
+Если строка содержит менее 3 символов — устанавливаем в состояние <em style="color: #EB5757;">error</em> (с помощью <em style="color: #EB5757;">setError()</em> соответствующее сообщение об ошибке).
+Если строка содержит 3 и более символов — устанавливаем как раньше в состояние <em style="color: #EB5757;">value</em> значение <em style="color: #EB5757;">promptValue</em>, а также в состояние error значение пустой строки.
+После этого выводим ошибку на экран. Для этого находим в шаблоне <em style="color: #EB5757;">\<div\></em> c классом error и выводим в него состояние error.
+
+Однако, этого недостаточно. Нам также нужно удалять этот <em style="color: #EB5757;">\<div\></em> из разметки в случае, если ошибок нет. Для этого воспользуемся условным рендерингом — выводим <em style="color: #EB5757;">\<div\></em> только в случае если <em style="color: #EB5757;">error !== ''</em>. После этого убедитесь, что при вводе корректного значения оно добавляется на экран, а при вводе некорректного — появляется сообщение об ошибке и неправильное значение не добавляется на экран.
+
+**Шаг 7. Блокировка кнопки**. В функции-компоненте <em style="color: #EB5757;">App</em> создайте переменную — <em style="color: #EB5757;">isValueVaild</em>. Она содержит значение типа Boolean:
+
+* <em style="color: #EB5757;">false</em> — в случае если <em style="color: #EB5757;">value</em> содержит менее 3 символов;
+* <em style="color: #EB5757;">true</em> — в случае если <em style="color: #EB5757;">value</em> содержит 3 и более символов.
+
+Передайте эту переменную в атрибут кнопки Добавить в список следующим образом: <em style="color: #EB5757;">disabled={!isValueVaild}</em>.
+
+**Шаг 8. Добавьте второй обработчик**. После этого в компоненте создайте новую функцию — <em style="color: #EB5757;">onAddButtonClick()</em> и сделайте так, чтобы она вызывалась при клике на кнопку **Добавить в список**. Внутри этой функции в случае, если в <em style="color: #EB5757;">value</em> содержится корректное значение, необходимо добавить <em style="color: #EB5757;">value</em> в массив (из состояния <em style="color: #EB5757;">list</em>), а также установить в состояния <em style="color: #EB5757;">value</em> и <em style="color: #EB5757;">error</em> значения пустой строки (делаем сброс).
+
+Но массив <em style="color: #EB5757;">list</em> будет содержать не просто строки из <em style="color: #EB5757;">value</em>, а объекты вида <em style="color: #EB5757;">{ id: 1, value: '123' }</em>. Для того, чтобы добавить новый элемент в массив <em style="color: #EB5757;">list</em>, нам необходимо передать новый обновленный массив в функцию <em style="color: #EB5757;">setList()</em>. Для этого создайте новую переменную <em style="color: #EB5757;">updatedList</em>, которая будет содержать массив с элементами массива <em style="color: #EB5757;">list</em> (разверните с помощью spread-оператора), а также нового элемента — объекта, структура которого описана выше. Запись получится примерно следующая: <em style="color: #EB5757;">const updatedList = [...list, { id, value }]</em>.
+
+По итогу переменная <em style="color: #EB5757;">updatedList</em> должна содержать массив со всеми элементами массива <em style="color: #EB5757;">list</em> + в конце новый объект со значением <em style="color: #EB5757;">value</em>. Для генерации <em style="color: #EB5757;">id</em> можно использовать <em style="color: #EB5757;">Date.now()</em>. Переменную <em style="color: #EB5757;">updatedList</em> необходимо передать в функцию <em style="color: #EB5757;">setList()</em>.
+
+Также при желании можно не создавать переменную <em style="color: #EB5757;">updatedList</em> от состояния <em style="color: #EB5757;">list</em>, а <a href="https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state" target="_blank">использовать updater-функцию</a> для <em style="color: #EB5757;">setList()</em>.
+
+**Шаг 9. Выведите список в JSX**. В разметке выведите список из состояния <em style="color: #EB5757;">list</em> с помощью метода массива <em style="color: #EB5757;">map()</em>. Не забывайте, что элементы списка — объекты. Для вывода значения в тег <em style="color: #EB5757;">\<li\></em> используйте свойство объекта <em style="color: #EB5757;">value</em>, а в качестве key — свойство <em style="color: #EB5757;">id</em>.
+
+Также, используя условный рендеринг, сделайте так, чтобы:
+
+при наличии элементов в массиве <em style="color: #EB5757;">list</em> на экран выводился список;
+если элементов нет — на экран выводится сообщение **Нет добавленных элементов**.
+После этого убедитесь, что приложение исправно работает.
+
+**Дополнительно (по желанию)**: в каждый элемент списка дополнительно добавлять дату и время создания (в формате <em style="color: #EB5757;">25.02.2027 16:06:54</em>).
+
+### Также, можно опубликовать выполненную работу на GitHub Pages
+
+* **Установите пакет**. Для выгрузки на GitHub Pages можно использовать npm пакет [gh-pages](https://www.npmjs.com/package/gh-pages). Установка:
+
+```shell
+npm install gh-pages --save-dev
+```
+
+* **Добавьте скрипт**. Далее нам необходимо добавить новый npm скрипт в ​​​<em style="color: #EB5757;">​package.json​​​</em>​. С помощью него, мы будем выгружать наше приложение на хостинг. Общий скрипт может выглядеть следующим образом:
+
+```json
+"deploy": "gh-pages -d dist -e current_task -b gh-pages-dumplings-guide -v \"**/.*\""
+```
+
+\- где <em style="color: #EB5757;">dist</em> название директории с выходным бандлом. В случае конфликта с <em style="color: #EB5757;">.gitignore</em> можно конфигурировать настройки сборщика (в случае с vite <em style="color: #EB5757;">vite.config.js</em>) или паттерны <em style="color: #EB5757;">.gitignore</em>
+
+\-  <em style="color: #EB5757;">-e current_task</em> директория назначения относительно корня. Текущая система предусматривает использование вложенных директорий для одного развернутого сайта для одного репозитория. Github pages имеет ограничения
+
+\- <em style="color: #EB5757;">-b gh-pages-dumplings-guide</em> название ветки для деплоя (по умолчанию gh-pages)
+
+\-  <em style="color: #EB5757;">--v \"**/.*\"</em> удаление из директории репозиотрия для развертывания точечных файлов. При определенных обстоятельствах этот флаг необходимо убирать
+
+* **Добавить путь.** Необходимо добавить базовый путь для dev-сервера (пустая строка или ./ (для встроенного развертывания)):
+
+```js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
+// https://vite.dev/config/
+export default defineConfig({
+	plugins: [react()],
+	base: './',  // <-
+});
+```
+
+* **Добавьте homepage** Далее также в файле ​​​<em style="color: #EB5757;">​package.json​​​</em>​ нужно добавить ​​​<em style="color: #EB5757;">​homepage</em>​​​​
+**username** - имя пользователя на GitHub, **repository** - название репозитория:
+
+```json
+"homepage": "https://<username>.github.io/<repository>/"
+```
+
+Для сборки vite этот шаг не обязателен
+
+* **Выполните build**:
+
+```shell
+npm run build
+```
+
+* **Выполните deploy**:
+```shell
+npm run deploy
+```
+
+* **или**
+
+```shell
+npm run build && npm run deploy
+```
+
+* **Готово!** Проект доступен по адресу, указанному в homepage в package.json https://\<username\>.github.io/\<repository\>/current_task
