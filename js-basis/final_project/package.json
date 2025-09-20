@@ -6,12 +6,12 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "webpack --mode=production",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -e final_project_donate_app"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://Aberezhnoy1980.github.io/ResultUniversityCourse/",
+  "homepage": "https://Aberezhnoy1980.github.io/ResultUniversityCourse/final_project_donate_app/",
   "devDependencies": {
     "@babel/core": "^7.17.0",
     "@babel/preset-env": "^7.16.11",

@@ -1,4 +1,4 @@
-import ReactLogo from './assets/react.svg?react';
+import ReactLogo from './assets/logo.svg?react';
 import './App.css';
 import Dater from './components/DateComponent';
 import { createElement } from 'react';

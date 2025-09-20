@@ -1,0 +1,732 @@
+[
+	{
+		"id": "01",
+		"module": "База JavaScript",
+		"topoics": [
+			{
+				"id": "001",
+				"title": "Hello World",
+				"tasks": [
+					{
+						"task_id": "0001",
+						"title": "First project",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/first-project",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0002",
+						"title": "Простой таймер",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/first-project/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0003",
+						"title": "js_quiz",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/first-project/js-info.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0004",
+						"title": "math_quiz",
+						"source_code_url": "https://codepen.io/bxzcnzcb-the-typescripter/pen/ZYGdNEY",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "002",
+				"title": "Синтаксис",
+				"tasks": [
+					{
+						"task_id": "0005",
+						"title": "Комментарии",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/comments/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0006",
+						"title": "Создаание переменных",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/comments/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0007",
+						"title": "Создание автомобиля",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/car.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0008",
+						"title": "Переопределение переменных",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/car.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0009",
+						"title": "Еще один quiz с константами",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/const.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "003",
+				"title": "Типы данных",
+				"tasks": [
+					{
+						"task_id": "0010",
+						"title": "Каталог типов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson003_types/task001_types/data-types.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0011",
+						"title": "Переопределение типов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson003_types/task002_types_override/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0012",
+						"title": "Переопределение типов 2",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson003_types/task003_types_override/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "004",
+				"title": "Приведение типов",
+				"tasks": [
+					{
+						"task_id": "0013",
+						"title": "Преобразование к трем типам",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson004_types_casting/task001/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0014",
+						"title": "Явное и неявное преобразование",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson004_types_casting/task002/task-2.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0015",
+						"title": "Явное преобразование сущностей",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson004_types_casting/task003/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0016",
+						"title": "Еще немного явного преобразования",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson004_types_casting/task004/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "005",
+				"title": "Работа со строками",
+				"tasks": [
+					{
+						"task_id": "0017",
+						"title": "Два способа конкатенации",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task001_concat/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0018",
+						"title": "Работа с текстом",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task001_concat/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0019",
+						"title": "Форматирование текста",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task003_methods/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0020",
+						"title": "Форматирование и преобразования",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task004/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0021",
+						"title": "Обрезание строки",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task005/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0022",
+						"title": "Обрезание текста до слова",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson005_strings/task006/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "006",
+				"title": "Введение в основы JavaScript",
+				"tasks": [
+					{
+						"task_id": "0023",
+						"title": "Простая авторизация",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson006_math/task001_auth_ex/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0024",
+						"title": "Еще один математический quiz",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson006_math/task002_tests/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0025",
+						"title": "Использование confirm()",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson006_math/task003_confirm/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0026",
+						"title": "Ввод имени в цикле",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson006_math/task004/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0027",
+						"title": "Расчет суммы в цикле",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson006_math/task005/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "007",
+				"title": "Debug",
+				"tasks": [
+					{
+						"task_id": "0028",
+						"title": "Проверка условия",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson007_debug/task001/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0029",
+						"title": "Продолжение проверки условия",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson007_debug/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0030",
+						"title": "Расчет зп разработчика после налогов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson007_debug/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0031",
+						"title": "Поиск ошибки в сумме кубов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson007_debug/task004/task004.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "008",
+				"title": "Функции",
+				"tasks": [
+					{
+						"task_id": "0032",
+						"title": "Виды объявления функций",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson008_functions/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0033",
+						"title": "Функция суммы с параметрами",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson008_functions/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0034",
+						"title": "Поиск количества делителей",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson008_functions/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "009",
+				"title": "Массивы",
+				"tasks": [
+					{
+						"task_id": "0035",
+						"title": "Очередь на почте",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0036",
+						"title": "Функция суммы крайних элементов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0037",
+						"title": "Поиск кофе по названию",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0038",
+						"title": "Изменение цены на кофе",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task004/task004.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0039",
+						"title": "Рейтйинг кофейни",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task005/task005.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0040",
+						"title": "Еще одна сумма кубов (reduce())",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson009_arrays/task006/task006.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "010",
+				"title": "Объекты",
+				"tasks": [
+					{
+						"task_id": "0041",
+						"title": "Пользователи онлайн",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson010_objects/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0042",
+						"title": "Выдача талоньчиков в поликлиннику",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson010_objects/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0043",
+						"title": "Функция обработчик объекта",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson010_objects/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0044",
+						"title": "Новая работа для студента",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson010_objects/task004/task004.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0045",
+						"title": "Сумматор аргумента переменной длинны",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson010_objects/task005/task005.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "011",
+				"title": "Дата и время в JavaScript",
+				"tasks": [
+					{
+						"task_id": "0046",
+						"title": "Форматировщик даты",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson011_datetime/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0047",
+						"title": "Количество дней до дня рождения",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson011_datetime/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0048",
+						"title": "Добавление дней к дате",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson011_datetime/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "012",
+				"title": "Ключевое слово this",
+				"tasks": [
+					{
+						"task_id": "0049",
+						"title": "Прогресс обучения студентов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson012_this/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0050",
+						"title": "Одомашивание животных",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson012_this/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0051",
+						"title": "Debug футболиста",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson012_this/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "013",
+				"title": "",
+				"tasks": [
+					{
+						"task_id": "0052",
+						"title": "Создание класса Student",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson013_OOP/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0053",
+						"title": "Создание Person и сравнение возраста",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson013_OOP/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0054",
+						"title": "Разрабатываем словарь",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson013_OOP/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0055",
+						"title": "Добавляем в словарь сложные слова",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson013_OOP/task004/task004.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0056",
+						"title": "Контроль карьеры разработчиков",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson013_OOP/task005/task005.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "014",
+				"title": "Работа с DOM, часть 1",
+				"tasks": [
+					{
+						"task_id": "0057",
+						"title": "Создаем структуру HTML через JavaScript",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson014_DOM_1/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0058",
+						"title": "Приложение для контроля задач (ПКЗ)",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson014_DOM_1/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "015",
+				"title": "Работа с DOM, часть 2",
+				"tasks": [
+					{
+						"task_id": "0059",
+						"title": "Добавляем задачи в ПКЗ",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson015_DOM_2/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0060",
+						"title": "Добавляем валидацию в ПКЗ",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson015_DOM_2/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0061",
+						"title": "Добавляем удаление задач в ПКЗ",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson015_DOM_2/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0062",
+						"title": "Смена темы в ПКЗ",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson015_DOM_2/task004/task004.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "016",
+				"title": "Асинхронность (Promise + Fetch)",
+				"tasks": [
+					{
+						"task_id": "0063",
+						"title": "Получение и рендеринг списка пользоватей",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson016_async_promise_fetch/task001/4_promise.all.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0064",
+						"title": "Получение пользователей по id",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson016_async_promise_fetch/task002/promise.all.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0065",
+						"title": "Отображение фотографии, которая загрузилась первой",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson016_async_promise_fetch/task003/index.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "017",
+				"title": "Асинхронность (async/await)",
+				"tasks": [
+					{
+						"task_id": "0066",
+						"title": "Переписать создание постов с .then(), .catch() и .finally() на async/await",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson017_async_await/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0067",
+						"title": "Переписать получени todos по id с .then(), .catch() и .finally() на async/await",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson017_async_await/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0068",
+						"title": "Рендер альбомов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson017_async_await/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "018",
+				"title": "Callback + Event Loop",
+				"tasks": [
+					{
+						"task_id": "0069",
+						"title": "Порядок выполнения инструкций",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson018_callback_event_loop/task001/task001.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0070",
+						"title": "Еще раз про порядок",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson018_callback_event_loop/task002/task002.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0071",
+						"title": "И еще порядок выполнения",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson018_callback_event_loop/task003/task003.js",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "019",
+				"title": "Введение в сборщики",
+				"tasks": [
+					{
+						"task_id": "0072",
+						"title": "Создаем проект rollup",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/lesson019_hw",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0073",
+						"title": "Конфигурируем и запускаем проект rollup",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/lesson019_hw",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0074",
+						"title": "Создаем проект webpack",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/lesson019_hw_part_2",
+						"web_page_url": "#",
+						"status": ["ok"]
+					},
+					{
+						"task_id": "0075",
+						"title": "Конфигурируем и запускаем проект webpack",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/lesson019_hw_part_2",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "020",
+				"title": "ES6 import export",
+				"tasks": [
+					{
+						"task_id": "0076",
+						"title": "Рандомный цвет страницы",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/lesson020_hw",
+						"web_page_url": "#",
+						"status": ["ok"]
+					}
+				]
+			},
+			{
+				"id": "021",
+				"title": "Итоговый проект",
+				"tasks": [
+					{
+						"task_id": "0077",
+						"title": "Приложение лоя донатов",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/final_project",
+						"web_page_url": "https://Aberezhnoy1980.github.io/ResultUniversityCourse/final_project_donate_app/",
+						"status": ["ok", "deployed"]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "02",
+		"module": "Хакатон",
+		"topoics": [
+			{
+				"id": "001",
+				"title": "Хакатон 1",
+				"tasks": [
+					{
+						"task_id": "0001",
+						"title": "Контекстное меню",
+						"source_code_url": "https://github.com/timanil126-cmd",
+						"web_page_url": "https://timanil126-cmd.github.io/hakaton-project/",
+						"status": ["ok", "deployed"]
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "03",
+		"module": "Frontend",
+		"topoics": [
+			{
+				"id": "001",
+				"title": "Введение в React",
+				"tasks": [
+					{
+						"task_id": "0001",
+						"title": "Проект react: с JSX и без него",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson001_react_intro/vite-hw-app",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/dater/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0002",
+						"title": "Ввод значения",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002",
+						"web_page_url": "",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0003",
+						"title": "Инструкция по готовке пельменей",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002_task002",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/dumplings_guide/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0004",
+						"title": "Калькулятор",
+						"source_code_url": "#",
+						"web_page_url": "#",
+						"status": ["ok", "deployed"]
+					}
+				]
+			}
+		]
+	}
+]
