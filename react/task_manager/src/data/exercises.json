@@ -2,7 +2,7 @@
 	{
 		"id": "01",
 		"module": "База JavaScript",
-		"topoics": [
+		"topics": [
 			{
 				"id": "001",
 				"title": "Hello World",
@@ -50,7 +50,7 @@
 					},
 					{
 						"task_id": "0006",
-						"title": "Создаание переменных",
+						"title": "Создание переменных",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/blob/main/js-basis/lesson002_syntax/comments/index.js",
 						"web_page_url": "#",
 						"status": ["ok"]
@@ -434,7 +434,7 @@
 			},
 			{
 				"id": "013",
-				"title": "",
+				"title": "Классы + ООП",
 				"tasks": [
 					{
 						"task_id": "0052",
@@ -661,7 +661,7 @@
 				"tasks": [
 					{
 						"task_id": "0077",
-						"title": "Приложение лоя донатов",
+						"title": "Приложение для донатов",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/js-basis/final_project",
 						"web_page_url": "https://Aberezhnoy1980.github.io/ResultUniversityCourse/final_project_donate_app/",
 						"status": ["ok", "deployed"]
@@ -673,13 +673,13 @@
 	{
 		"id": "02",
 		"module": "Хакатон",
-		"topoics": [
+		"topics": [
 			{
-				"id": "001",
+				"id": "022",
 				"title": "Хакатон 1",
 				"tasks": [
 					{
-						"task_id": "0001",
+						"task_id": "0078",
 						"title": "Контекстное меню",
 						"source_code_url": "https://github.com/timanil126-cmd",
 						"web_page_url": "https://timanil126-cmd.github.io/hakaton-project/",
@@ -692,34 +692,40 @@
 	{
 		"id": "03",
 		"module": "Frontend",
-		"topoics": [
+		"topics": [
 			{
-				"id": "001",
+				"id": "023",
 				"title": "Введение в React",
 				"tasks": [
 					{
-						"task_id": "0001",
+						"task_id": "0079",
 						"title": "Проект react: с JSX и без него",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson001_react_intro/vite-hw-app",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/dater/",
 						"status": ["ok", "deployed"]
-					},
+					}
+				]
+			},
+			{
+				"id": "024",
+				"title": "Компоненты",
+				"tasks": [
 					{
-						"task_id": "0002",
+						"task_id": "0080",
 						"title": "Ввод значения",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002",
-						"web_page_url": "",
-						"status": ["ok", "deployed"]
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/input_value/",
+						"status": ["ok", "deployed", "updated"]
 					},
 					{
-						"task_id": "0003",
+						"task_id": "0081",
 						"title": "Инструкция по готовке пельменей",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002_task002",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/dumplings_guide/",
 						"status": ["ok", "deployed"]
 					},
 					{
-						"task_id": "0004",
+						"task_id": "0082",
 						"title": "Калькулятор",
 						"source_code_url": "#",
 						"web_page_url": "#",

@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-body {
+#root {
 	font-family: 'Inter', 'Arial', sans-serif;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	min-height: 100vh;
@@ -14,4 +14,22 @@ body {
 	align-items: center;
 	padding: 20px;
 	color: #333;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }

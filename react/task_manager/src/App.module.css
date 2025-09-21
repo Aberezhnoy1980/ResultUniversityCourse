@@ -1,10 +1,8 @@
 .content {
 	background: rgba(255, 255, 255, 0.95);
-	padding: 40px;
 	border-radius: 20px;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-	text-align: center;
-	max-width: 700px;
+	max-width: 900px;
 	width: 100%;
 	backdrop-filter: blur(10px);
 }
@@ -16,14 +14,158 @@ h1 {
 	font-size: 2.2em;
 }
 
-.tasks {
-	text-align: start;
+.catalog-header {
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #d1d9e0;
+	border-radius: 20px 20px 0 0;
+	padding: 15px;
+	text-align: center;
 }
 
-.task-list {
-	margin-bottom: 40px;
+.catalog-list {
+	text-align: start;
+	margin-bottom: 30px;
 	line-height: 1.6;
 	color: #555;
+	max-height: 600px;
+	overflow-y: auto;
+}
+
+.catalog-list-item {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.module-item {}
+
+.module-item__summury {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #000;
+}
+
+.module-item__topic-list_first-level-of-nesting {
+	padding-left: 20px;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.topic-item__topic-list_second-level-of-nesting {
+	padding-left: 20px;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.topic-item__task-list-item {
+	line-height: 2em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.topic-item__task-list-item-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.topic-item__task-list-item:not(:first-child):not(:last-child) {
+	border-top: 1px solid #d1d9e0;
+	border-bottom: 1px solid #d1d9e0;
+}
+
+.items-count {
+	font-size: .7em;
+	color: #d1d9e0;
+}
+
+/* icons */
+.icon-button {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	transition: all 0.1s ease;
+	box-shadow:
+		0 5px 20px rgba(0, 0, 0, 0.2),
+		inset 0 -8px 15px rgba(0, 0, 0, 0.15),
+		inset 0 8px 15px rgba(255, 255, 255, 0.4);
+}
+
+.icon-button:hover {
+	transform: scale(1.2);
+	box-shadow:
+		0 10px 30px rgba(0, 0, 0, 0.3),
+		inset 0 -8px 15px rgba(0, 0, 0, 0.15),
+		inset 0 8px 15px rgba(255, 255, 255, 0.4);
+}
+
+.icon-button::before {
+	content: '';
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	filter: blur(5px);
+}
+
+.github-icon {
+	background: linear-gradient(135deg, #2b2727, #2f2929, #000000);
+}
+
+.pages-icon {
+	background: linear-gradient(135deg, #6691ff, #5e74ff, #343efe);
+}
+
+.icon-button i {
+	font-size: 15px;
+	color: white;
+}
+
+.shadow {
+	position: absolute;
+	bottom: -15px;
+	left: 15%;
+	width: 70%;
+	height: 12px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 50%;
+	filter: blur(10px);
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.icon-button:hover+.shadow {
+	width: 60%;
+	left: 20%;
+	opacity: 0.7;
+}
+
+.updated-icon {
+	color: white;
+	display: flex;
+	background-color: red;
+	max-height: 25px;
+	max-width: 25px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.checked-icon {
+	color: white;
+	display: flex;
+	background-color: green;
+	max-height: 25px;
+	max-width: 25px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 /* Футер */
