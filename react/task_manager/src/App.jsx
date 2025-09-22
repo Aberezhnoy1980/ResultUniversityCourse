@@ -41,9 +41,11 @@ function App() {
 															<li key={task.task_id} className={styles['topic-item__task-list-item']}>
 																{task.title}&nbsp;
 																<div className={styles['topic-item__task-list-item-actions']}>
+																	{task.status.some((status) => status === 'ok') && (
 																	<div className={styles['checked-icon']}>
 																		<i className={'fa-regular fa-circle-check'}></i>
 																	</div>
+																	)}
 																	{task.status.some((status) => status === 'updated') && (
 																		<div className={styles['updated-icon']}>
 																			<i className={'fa-regular fa-pen-to-square'}></i>
