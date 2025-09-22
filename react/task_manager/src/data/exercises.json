@@ -727,9 +727,9 @@
 					{
 						"task_id": "0082",
 						"title": "Калькулятор",
-						"source_code_url": "#",
-						"web_page_url": "#",
-						"status": ["ok", "deployed"]
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002_task003_calculator",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/calculator/",
+						"status": ["deployed"]
 					}
 				]
 			}
