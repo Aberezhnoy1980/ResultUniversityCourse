@@ -1,0 +1,85 @@
+    @font-face {
+      font-family: 'Calculator';
+      src: url('./fonts/Digital7Mono-Yz9J4.ttf') format('truetype');
+    }
+
+.calculator {
+	width: 340px;
+	background-color: #2c3e50b7;
+	border-radius: 20px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+}
+
+.display {
+	font-family: "Calculator", sans-serif;
+	background-color: #b4b4b4;
+	border: 20px solid #000000a8;
+	color: #000000ad;
+	padding: 15px 10px;
+	text-align: right;
+	font-size: 3.5rem;
+	font-weight: 300;
+	min-height: 128px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-bottom: 2px solid #3d566e;
+}
+
+.history {
+	color: #000000ad;
+	font-size: 1rem;
+}
+
+.result {
+  color: green;
+}
+
+.keypad {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	padding: 20px;
+}
+
+.btn {
+	border: none;
+	outline: none;
+	padding: 18px 10px;
+	border-radius: 12px;
+	font-size: 1.5rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	background-color: #ecf0f1;
+	color: #2c3e50;
+	box-shadow: 0 4px 0 #bdc3c7;
+}
+
+.btn:active {
+	transform: translateY(4px);
+	box-shadow: 0 0 0 #bdc3c7;
+}
+
+.btn.operator {
+	background-color: #f39c12;
+	color: white;
+	box-shadow: 0 4px 0 #d35400;
+}
+
+.btn.equals {
+	background-color: #27ae60;
+	color: white;
+	box-shadow: 0 4px 0 #1e8449;
+	grid-column: span 2;
+}
+
+.btn.clear {
+	background-color: #e74c3c;
+	color: white;
+	box-shadow: 0 4px 0 #c0392b;
+}
+
+.btn.zero {
+	grid-column: span 2;
+}
