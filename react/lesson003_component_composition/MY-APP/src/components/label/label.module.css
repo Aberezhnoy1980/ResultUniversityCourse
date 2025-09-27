@@ -1,0 +1,28 @@
+label {
+	text-decoration: underline;
+}
+
+.appLabel {
+	font-style: italic;
+}
+
+.userLabel {
+	font-weight: bold;
+}
+
+.contactsLabel {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+
+.blue {
+	color: blue;
+}
