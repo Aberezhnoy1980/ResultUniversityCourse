@@ -1,0 +1,7 @@
+.formValidation {
+ min-width: 300px;
+}
+
+.errorLabel {
+	color:  red;
+}

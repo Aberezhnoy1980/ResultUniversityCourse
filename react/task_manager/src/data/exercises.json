@@ -729,6 +729,13 @@
 						"title": "Калькулятор",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson002_components/hw002_task003_calculator",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/calculator/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0083",
+						"title": "Крестики-нолики",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson003_component_composition/XO-GAME",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/xo_game/",
 						"status": ["deployed"]
 					}
 				]

@@ -1,0 +1,34 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+	text-align: center;
+}
+
+.text {
+	text-align: start;
+	max-width: 500px;
+}
+
+.totalText {
+	background-color: red;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.content {
+	display: none;
+}
+
+input[type="checkbox"]:checked+.content {
+	display: block;
+}
