@@ -1,7 +1,7 @@
 import { passwordPatterns } from './passwordPatterns';
 
 export const calculatePasswordStrength = (password) => {
-	if (password.length === 0) return '';
+	if (password?.length === 0) return '';
 
 	const requirementsMet = [
 		passwordPatterns.minLength.test(password),

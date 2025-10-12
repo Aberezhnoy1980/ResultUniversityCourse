@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { sendData, validatePassword } from '../../utils';
+import { sendData, validatePassword, calculatePasswordStrength } from '../../utils';
 import styles from './SimpleReg.module.css';
-import { calculatePasswordStrength } from '../../utils/calculatePasswordStrength';
 
 const initialState = {
 	email: '',

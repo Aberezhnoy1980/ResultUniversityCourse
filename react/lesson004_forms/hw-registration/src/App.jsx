@@ -1,11 +1,11 @@
-import { SimpleReg } from './components';
+import { SimpleReg, ReactHookFormReg } from './components';
 import styles from './App.module.css';
 
 function App() {
 	return (
 		<div className={styles.app}>
 			<SimpleReg />
-			{/* <ReactHookFormReg /> */}
+			<ReactHookFormReg />
 		</div>
 	);
 }

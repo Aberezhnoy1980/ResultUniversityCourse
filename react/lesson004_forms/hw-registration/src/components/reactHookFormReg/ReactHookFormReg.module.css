@@ -24,35 +24,27 @@
 	min-width: 500px;
 }
 
-.passwordSection {
-	position: relative;
-}
-
 .strengthIndicator {
 	font-size: 12px;
 	padding: 4px 8px;
 	border-radius: 4px;
-	margin: 0 0 4px 0;
+	margin: 4px 0;
 	text-align: left;
-	min-width: 100%;
 }
 
 .strengthIndicator.слабый {
 	background-color: #ffebee;
 	color: #c62828;
-	border: 1px solid #ffcdd2;
 }
 
 .strengthIndicator.средний {
 	background-color: #fff3e0;
 	color: #ef6c00;
-	border: 1px solid #ffe0b2;
 }
 
 .strengthIndicator.сильный {
 	background-color: #e8f5e8;
 	color: #2e7d32;
-	border: 1px solid #c8e6c9;
 }
 
 .errorInput {
@@ -61,7 +53,7 @@
 }
 
 .regForm input {
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	width: 100%;
 	padding: 10px;
 	border: 1px solid #ddd;
