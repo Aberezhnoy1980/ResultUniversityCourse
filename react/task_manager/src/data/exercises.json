@@ -736,6 +736,13 @@
 						"title": "Крестики-нолики",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson003_component_composition/XO-GAME",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/xo_game/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0084",
+						"title": "Регистрация",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson004_forms/hw-registration",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/registration/",
 						"status": ["deployed"]
 					}
 				]

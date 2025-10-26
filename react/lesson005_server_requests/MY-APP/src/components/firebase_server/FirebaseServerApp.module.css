@@ -1,0 +1,11 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	border: 1px solid red;
+	padding: 10px;
+}
+
+.item {
+	border-bottom: 1px solid red;
+}
