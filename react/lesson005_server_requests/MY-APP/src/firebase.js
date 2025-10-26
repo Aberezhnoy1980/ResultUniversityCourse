@@ -1,15 +1,27 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
+import { checkEnvVars, REQUIRED_ENV_VARS } from './utils';
+
+checkEnvVars(REQUIRED_ENV_VARS);
+
+const {
+	VITE_API_KEY: apiKey,
+	VITE_AUTH_DOMAIN: authDomain,
+	VITE_PROJECT_ID: projectId,
+	VITE_STORAGE_BUCKET: storageBucket,
+	VITE_MESSAGING_SENDER_ID: messagingSenderId,
+	VITE_APP_ID: appId,
+	VITE_DATABASE_URL: databaseURL,
+} = import.meta.env;
 
 const firebaseConfig = {
-	apiKey: 'AIzaSyADS0mdxlwjB1rIY0dwPCj5gO4P23LTBU8',
-	authDomain: 'productsproject-a5018.firebaseapp.com',
-	projectId: 'productsproject-a5018',
-	storageBucket: 'productsproject-a5018.firebasestorage.app',
-	messagingSenderId: '663856666917',
-	appId: '1:663856666917:web:2196d3a466e121917d62cc',
-	databaseURL:
-		'https://productsproject-a5018-default-rtdb.europe-west1.firebasedatabase.app/',
+	apiKey,
+	authDomain,
+	projectId,
+	storageBucket,
+	messagingSenderId,
+	appId,
+	databaseURL,
 };
 
 const app = initializeApp(firebaseConfig);

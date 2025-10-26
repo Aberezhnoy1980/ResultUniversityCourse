@@ -67,3 +67,5 @@ firebase init
 ```shell
 firebase deploy
 ```
+
+## Обязательно не забыть правильно обработать [переменные окружения!](https://vite.dev/guide/env-and-mode.html#env-variables-and-modes)
