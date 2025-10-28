@@ -1,0 +1,14 @@
+.error {
+  color: #dc3545;
+  padding: 10px;
+  border: 1px solid #dc3545;
+  border-radius: 4px;
+  background: #f8d7da;
+}
+
+.description {
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-align: center;
+}
