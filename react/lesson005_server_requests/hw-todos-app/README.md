@@ -15,25 +15,43 @@
 src/
 ├── components/
 │   ├── ui/                          # Переиспользуемые UI компоненты
-│   │   └── Loader/
-│   │       ├── Loader.jsx
-│   │       └── Loader.module.css
+│   │   ├── Loader/
+│   │   │   ├── Loader.jsx
+│   │   │   └── Loader.module.css
+│   │   └── index.js                 # Оптимизмция импортов/экспортов
 │   │
 │   ├── todo/                        # Компоненты связанные с задачами
-│   │   └── TodoList/                # Stateless компонент списка
-│   │       ├── TodoList.jsx
-│   │       └── TodoList.module.css
+│   │   ├── TodoList/                # Stateless компонент списка
+│   │   │   ├── TodoList.jsx
+│   │   │   └── TodoList.module.css
+│   │   ├── TodoForm                 # Компонент форма для добавления todo
+│   │   │   ├── TodoForm.jsx
+│   │   │   └── TodoForm.module.css
+│   │   ├── TodoItem                 # Компонент элемента списка
+│   │   │   ├── TodoItem.jsx
+│   │   │   └── TodoItem.module.css
+│   │   └── Index.js
 │   │
-│   ├── implementations/             # Конкретные реализации
-│   │   └── SimpleJSONPlaceholderTodoApp/
-│   │       ├── SimpleJSONPlaceholderTodoApp.jsx
-│   │       └── SimpleJSONPlaceholderTodoApp.module.css
-│   │
+│   └── implementations/             # Конкретные реализации
+│       ├── SimpleJSONPlaceholderTodoApp/
+│       │   ├── SimpleJSONPlaceholderTodoApp.jsx
+│       │   └── SimpleJSONPlaceholderTodoApp.module.css
+│       ├── JsonServerTodoApp/
+│       │   ├── JsonServerTodoApp.jsx
+│       │   └── JsonServerTodoApp.module.css
+│       └── Index.js
+│
 ├── hooks/                           # Кастомные хуки
-│   └── useApi.js                    # Абстракция для API вызовов
+│   ├── useApi.js                    # Абстракция для API вызовов
+│   ├── useDebounce.js
+│   ├── useTodos.js
+│   └── Index.js
+│
 │
 ├── services/                        # Сервисы для работы с API
-│   └── jsonPlaceholderApi.js
+│   ├── jsonPlaceholderApi.js
+│   ├── jsonServerApi.js
+│   └── Index.js
 │
 ├── utils/                           # Вспомогательные функции
 │   ├── constants.js
@@ -41,5 +59,83 @@ src/
 │
 └── App.jsx
 ```
+
+[коммит задания](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/54deb75e40875bce1eeb2bbb0ec9c38e8d6b0ab4)
+
+1. Переделать приложение, заменив JSON Placeholder на JSON Server:
+
+* начальный список дел отсутствует (пустой массив);
+* реализовать CRUD-операции, добавить возможность добавления, изменения и удаления дела;
+* реализовать поиск дел по заданной фразе (для нахождения элемента в тексте дела должен быть совпадающий с введенной фразой фрагмент);
+* реализовать кнопку для включения режима сортировки дел по алфавиту, если кнопка не нажата — изначальная сортировка (т. е. отсутствие сортировки).
+
+Используйте стабильную версию json-server для решения задания:
+
+   ```
+   npx json-server@0.17.4 --watch db.json
+   ```
+
+или:
+
+   ```
+   npm install json-server@0.17.4
+   ```
+
+Дополнительно. Реализовать продвинутый поиск с помощью <em style="color: #EB5757">debounce()</em>.
+
+## Имплемемнтация
+
+* Установка [сервера](https://www.npmjs.com/package/json-server)
+
+```shell
+npm i json-server
+```
+
+* Добавим в <em style="color: #EB5757">package.json</em> скрипт запуска сервера с параметризацией порта и времени задержки операций (имитация работы сети)
+
+```json
+...
+	"scripts": {
+		...,
+		"json-server":  "json-server --watch src/data/db.json --port 3001 --delay 2000"
+	},
+...
+```
+
+### Summary
+
+* **Архитектура и используемые хуки:**
+
+  * `useState` - управление состоянием компонента (изменение вызывает перерендер)
+  * `useEffect` - обработка побочных эффектов (загрузка данных, подписки)
+  * `useCallback` - мемоизация функций для стабильных зависимостей в `useEffect`
+  * `useMemo` - кэширование результатов вычислений для оптимизации производительности
+
+* **Ключевые архитектурные решения:**
+
+  * **Оптимистичное обновление UI**: CRUD-операции сразу отражаются в интерфейсе, затем синхронизируются с БД
+  * **Разделение ответственности**: сервисный слой отделен от логики компонентов
+  * **Кастомные хуки**: инкапсуляция бизнес-логики работы с данными
+  * **Компонентный подход**: переиспользуемые UI-компоненты (TodoList, TodoItem, Loader)
+
+* **Особенности реализации:**
+
+  * **Локальная БД**: json-server обеспечивает REST API для разработки
+  * **Клиентская фильтрация и сортировка**: выполняется на стороне React для простоты
+  * **Debounce поиска**: оптимизация производительности при частом вводе
+  * **Error Boundaries**: обработка ошибок загрузки данных
+
+* **Учебный контекст:**
+
+  * **Лабораторные условия**: один экземпляр приложения = один пользователь
+  * **Рассинхронизация допустима**: в production потребуется real-time синхронизация
+  * **Архитектура готова к масштабированию**: легко добавить новые реализации (Firebase и др.)
+
+### **Технические детали:**
+- Реализован полноценный CRUD (Create, Read, Update, Delete)
+- Поиск с debounce для оптимизации производительности
+- Сортировка по алфавиту с toggle-режимом
+- Валидация ввода и обработка ошибок
+- Интуитивный UX с мгновенной обратной связью
 
 [коммит задания]()
