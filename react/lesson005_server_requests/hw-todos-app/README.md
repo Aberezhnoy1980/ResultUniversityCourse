@@ -242,4 +242,4 @@ firebase deploy
 
 Приложение доступно по адресу https://todosproject-9608a.web.app
 
-[коммит задания](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/c1ad3bd1672417e39854dcce2d4ea1b3eb452e78)
+[коммит задания](https://github.com/Aberezhnoy1980/ResultUniversityCourse/commit/6861da2805c7db40365d0e4181a04df4c1a5c11f)

@@ -743,6 +743,13 @@
 						"title": "Регистрация",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson004_forms/hw-registration",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/registration/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0085",
+						"title": "Список дел",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson005_server_requests/hw-todos-app",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/todos/",
 						"status": ["deployed"]
 					}
 				]
