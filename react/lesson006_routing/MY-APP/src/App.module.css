@@ -1,0 +1,126 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+:global .active {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.5em;
+	color: blueviolet;
+}
+
+.header {
+	text-align: center;
+}
+
+.rounded {
+	display: flex;
+	/* gap: 35px; */
+	counter-reset: li;
+	list-style: none;
+	font: 14px "Trebuchet MS", "Lucida Sans";
+	padding: 0;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+/* .rounded li {
+	padding-right: 30px;
+} */
+
+.rounded a {
+	position: relative;
+	display: block;
+	padding: .4em .4em .4em 2em;
+	margin: .5em 0;
+	background: #DAD2CA;
+	color: #444;
+	/* text-decoration: none; */
+	border-radius: .3em;
+	padding-right: 30px;
+	transition: .3s ease-out;
+}
+
+.rounded a:hover {
+	background: #E9E4E0;
+}
+
+.rounded a:hover:before {
+	transform: rotate(360deg);
+}
+
+.rounded a:before {
+	content: counter(li);
+	counter-increment: li;
+	position: absolute;
+	left: -1.3em;
+	top: 50%;
+	margin-top: -1.3em;
+	background: #8FD4C1;
+	height: 2em;
+	width: 2em;
+	line-height: 2em;
+	border: .3em solid white;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 2em;
+	transition: all .3s ease-out;
+}
+
+.productList {
+	padding: 0;
+	list-style: none;
+}
+
+.productList li {
+	padding: 6px;
+}
+
+.productList li:before {
+	padding-right: 10px;
+	font-weight: bold;
+	color: #77AEDB;
+	content: "\2606";
+	transition-duration: 0.5s;
+}
+
+.productList li:hover:before {
+	color: #337AB7;
+	content: "\2605";
+}
+
+.productCard {
+	border: 2px solid purple;
+	padding: 0 20px 28px;
+}
+
+.loader {
+	position: fixed;
+	top: 80%;
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	transform: translate(-50%, -50%);
+	border: 5px solid red;
+	border-radius: 50%;
+	border-left-color: transparent;
+	animation: loader 1s infinite;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
