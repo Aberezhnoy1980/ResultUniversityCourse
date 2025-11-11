@@ -1,0 +1,60 @@
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	gap: 15px;
+}
+
+.header h1 {
+	color: #2c3e50;
+	margin: 0;
+	font-size: 1.8rem;
+}
+
+.backButton {
+	background: #6c757d;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.2s;
+}
+
+.backButton:hover {
+	background: #5a6268;
+}
+
+.retryButton {
+	background: #3498db;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.retryButton:hover {
+	background: #2980b9;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 15px;
+	}
+
+	.header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+}

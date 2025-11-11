@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "title": "Переработать приложение Список дел, сделанное в задании пятого урока Запросы к серверу во втором пункте, то есть с JSON Server, без использования Firebase",
+      "createdAt": "2025-10-30T10:38:58.119Z",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "title": "Разобрать код Шилдта для java stream api",
+      "createdAt": "2025-10-30T10:39:21.966Z",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "Закончить java middle я.практикум sprint 1",
+      "createdAt": "2025-10-30T10:39:40.023Z",
+      "completed": true,
+      "id": 4
+    },
+    {
+      "title": "Пройти модуль по работе sqlalchemy python для работы со связями \"многие-ко-многим\"",
+      "createdAt": "2025-10-30T10:40:15.122Z",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Получить 450 уровень мастер престижа в COD BO6 Zombies (вопрос, зачем!?)",
+      "createdAt": "2025-11-10T12:11:28.075Z",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "title": "Поспать",
+      "createdAt": "2025-11-10T14:18:10.375Z",
+      "completed": true,
+      "id": 9
+    }
+  ]
+}

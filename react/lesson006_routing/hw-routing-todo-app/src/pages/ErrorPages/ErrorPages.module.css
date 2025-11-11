@@ -1,0 +1,85 @@
+.errorContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.errorContent {
+	text-align: center;
+	max-width: 500px;
+	padding: 40px;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.errorCode {
+	font-size: 4rem;
+	margin: 0 0 20px 0;
+	color: #e74c3c;
+}
+
+.errorTitle {
+	font-size: 1.8rem;
+	color: #2c3e50;
+	margin: 0 0 15px 0;
+}
+
+.errorMessage {
+	font-size: 1.1rem;
+	color: #7f8c8d;
+	line-height: 1.6;
+	margin: 0 0 30px 0;
+}
+
+.homeButton, .retryButton {
+	display: inline-block;
+	padding: 12px 30px;
+	background: #3498db;
+	color: white;
+	text-decoration: none;
+	border-radius: 6px;
+	font-weight: 500;
+	transition: background-color 0.2s;
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.homeButton:hover, .retryButton:hover {
+	background: #2980b9;
+	color: white;
+}
+
+.buttonGroup {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.retryButton {
+	background: #27ae60;
+}
+
+.retryButton:hover {
+	background: #219a52;
+}
+
+@media (max-width: 768px) {
+	.errorContent {
+		padding: 30px 20px;
+	}
+
+	.errorCode {
+		font-size: 3rem;
+	}
+
+	.buttonGroup {
+		flex-direction: column;
+		align-items: center;
+	}
+}
