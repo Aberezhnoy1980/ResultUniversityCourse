@@ -750,6 +750,13 @@
 						"title": "Список дел",
 						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson005_server_requests/hw-todos-app",
 						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/todos/",
+						"status": ["ok", "deployed"]
+					},
+					{
+						"task_id": "0086",
+						"title": "Список дел с маршрутизацией",
+						"source_code_url": "https://github.com/Aberezhnoy1980/ResultUniversityCourse/tree/main/react/lesson006_routing/hw-routing-todo-app",
+						"web_page_url": "https://aberezhnoy1980.github.io/ResultUniversityCourse/routing-todos/",
 						"status": ["deployed"]
 					}
 				]
