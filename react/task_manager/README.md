@@ -35,7 +35,7 @@ https://account_name.github.io/MyProject/Site2
 
 В основном, проекты в репозитории представлены сборками <em style="color: #EB5757;">vite + react</em>, при этом удобно использовать <em style="color: #EB5757;">npm</em> пакет [gh-pages](https://www.npmjs.com/package/gh-pages) для автоматизации развертывания.
 
-### Исходя из этого, общий flow для развертывания сайтов такой:
+### Исходя из этого, общий flow для развертывания сайтов такой
 
 * В каждый проект утсанавливается dev зависимость [gh-pages](https://www.npmjs.com/package/gh-pages)
 
@@ -44,29 +44,75 @@ npm i -D gh-pages
 ```
 
 * Данное приложение развертывается в корневую директорию ветки для deploy, потому конфигурация следующая:
-	* <em style="color: #EB5757;">vite.config.js</em>
-	```js
-	import { defineConfig } from 'vite';
-	import react from '@vitejs/plugin-react-swc';
+ 	* <em style="color: #EB5757;">vite.config.js</em>
+ ```js
+ import { defineConfig } from 'vite';
+ import react from '@vitejs/plugin-react-swc';
 
-	// https://vite.dev/config/
-	export default defineConfig({
-		plugins: [react()],
-		base: './',
-	});
-	```
+ // https://vite.dev/config/
+ export default defineConfig({
+  plugins: [react()],
+  base: './',
+ });
+ ```
+
 	* <em style="color: #EB5757;">package.json</em> (добаввляем скрипт запуска):
+
     ```json
-	"deploy": "gh-pages -d dist -v \"**/.*\""
-	```
+ "deploy": "gh-pages -d dist -v \"**/.*\""
+ ```
+
 	где:
 
-	\- <em style="color: #EB5757;">dist</em> название директории с выходным бандлом (дистрибутив). В случае конфликта с <em style="color: #EB5757;">.gitignore</em> можно конфигурировать настройки сборщика (в случае с vite <em style="color: #EB5757;">vite.config.js</em>) или паттерны <em style="color: #EB5757;">.gitignore</em>
+ \- <em style="color: #EB5757;">dist</em> название директории с выходным бандлом (дистрибутив). В случае конфликта с <em style="color: #EB5757;">.gitignore</em> можно конфигурировать настройки сборщика (в случае с vite <em style="color: #EB5757;">vite.config.js</em>) или паттерны <em style="color: #EB5757;">.gitignore</em>
 
-	\- <em style="color: #EB5757;">--v \"**/.*\"</em> удаление из директории репозиотрия для развертывания точечных файлов. При определенных обстоятельствах этот флаг необходимо убирать. Что странно, данный ключ позволяет решить проблему, при которой gf-pages не обходит вложенную в dist директорию с артефактами assets.
+ \- <em style="color: #EB5757;">--v \"**/.*\"</em> удаление из директории репозиотрия для развертывания точечных файлов. При определенных обстоятельствах этот флаг необходимо убирать. Что странно, данный ключ позволяет решить проблему, при которой gf-pages не обходит вложенную в dist директорию с артефактами assets.
 
 * Для вложенных приложений, в скрипте развертывания необходимо указывать имя диркетории, которая будет создаваться в ветке для развертывания относительно корня:
   * <em style="color: #EB5757;">package.json</em>:
+
   ```json
   "deploy": "gh-pages -d dist -e current_task -v \"**/.*\""
   ```
+
+## Пакет gh-pages не поддерживает инкрементальный режим. Для такого поведения необходимо использовать прямые команды Git
+
+1. Создать новую рабочую копию для ветки gh-pages в директории 'gh-pages-deploy'
+
+```shell
+git worktree add -B gh-pages gh-pages-deploy origin/gh-pages
+```
+
+2. Скопировать файлы сборки в эту директорию (например, ваша сборка в папке 'dist')
+
+```shell
+cp -r dist/* gh-pages-deploy/
+```
+
+3. Перейти в новую директорию и выполнить коммит
+
+```shell
+cd gh-pages-deploy
+git add .
+git commit -m "Update deployment files"
+```
+
+4. Сделать pull
+
+```shell
+git pull origin gh-pages --no-rebase
+```
+
+6. Зафиксировать изменения и. отправить изменения на удаленный репозиторий
+
+```shell
+
+git add .; git commit -am"conflict fixed"; git push origin gh-pages
+```
+
+7. Вернуться в основную ветку и удалить worktree (опционально)
+
+```shell
+cd ..
+git worktree remove gh-pages-deploy
+```
