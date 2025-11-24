@@ -1,0 +1,22 @@
+{
+  "todos": [
+    {
+      "title": "Первая задача",
+      "createdAt": "2025-11-17T08:39:10.599Z",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "Задача номер два",
+      "createdAt": "2025-11-17T08:39:19.195Z",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "Task 3",
+      "createdAt": "2025-11-24T06:47:56.674Z",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}
