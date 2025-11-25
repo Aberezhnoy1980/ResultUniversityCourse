@@ -1,7 +1,7 @@
-import { store } from "../../../../store";
+import { useStore } from '../../../../hooks/useStore';
 
 export const CurrentUser = () => {
-	const { name } = store.getState();
+	const { name } = useStore();
 
 	return (
 		<div>

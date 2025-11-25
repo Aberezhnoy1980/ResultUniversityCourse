@@ -1,7 +1,7 @@
-import { store } from "../../../../store";
+import { useStore } from "../../../../hooks/useStore";
 
 export const UserContacts = () => {
-	const { email, phone } = store.getState();
+	const { email, phone } = useStore();
 
 	return (
 		<div>

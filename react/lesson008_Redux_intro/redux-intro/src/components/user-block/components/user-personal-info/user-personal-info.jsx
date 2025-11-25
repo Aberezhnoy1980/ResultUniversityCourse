@@ -1,22 +1,20 @@
+import { useStore } from '../../../../hooks/useStore';
 import { store } from '../../../../store';
 
 export const UserPersonalInfo = () => {
-	const { name, age } = store.getState();
+	const { name, age, email, phone } = useStore();
 
 	const onUserUpdate = () => {
-		const { name, email, phone } = store.getState();
 		const newUserData = { name, age: 45, email, phone };
 		store.dispatch({ type: 'SET_USER_DATA', payload: newUserData });
 	};
 
 	const onUserAgeDecrease = () => {
-		const { age } = store.getState();
 		const newAge = age - 1;
 		store.dispatch({ type: 'SET_USER_AGE', payload: newAge });
 	};
 
 	const onUserAgeIncrease = () => {
-		const { age } = store.getState();
 		store.dispatch({ type: 'SET_USER_AGE', payload: age + 1 });
 	};
 
