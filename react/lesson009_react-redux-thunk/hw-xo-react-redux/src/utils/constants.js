@@ -1,0 +1,4 @@
+export const ACTION_TYPES = {
+	CELL_CLICK: 'CELL_CLICK',
+	RESTART_GAME: 'RESTART_GAME',
+};
