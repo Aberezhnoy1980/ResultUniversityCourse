@@ -92,4 +92,4 @@ npm run build
 firebase deploy
 ```
 
-Приложение доступно по адресу https://
+Приложение доступно по адресу [https://](https://todosproject-9608a.web.app/)
