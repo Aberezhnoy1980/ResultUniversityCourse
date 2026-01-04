@@ -1,35 +1,49 @@
-import { useSelector } from 'react-redux';
-import styles from './fieldLayout.module.css';
+import { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { selectField } from '../../selectors/select-field';
 
-export const FieldLayout = ({ isWinningCell, onClick }) => {
-	const field = useSelector(selectField);
+export class FieldLayoutContainer extends Component {
+	render() {
+		const hasWinningCells = this.props.field.some((row, rowIndex) =>
+			row.some((_, colIndex) => this.props.isWinningCell(rowIndex, colIndex))
+		);
 
-	return (
-		<div className={styles.fieldContainer}>
-			{field.map((row, rowIndex) =>
-				row.map((cell, colIndex) => {
-					const cellClass = `${styles.gridItem} ${
-						isWinningCell(rowIndex, colIndex) ? styles.winCell : ''
-					}`;
+		return (
+			<div className="grid grid-cols-3 grid-rows-3 gap-1 bg-black w-[310px] h-[310px]">
+				{this.props.field.map((row, rowIndex) =>
+					row.map((cell, colIndex) => {
+						const isWinning = this.props.isWinningCell(rowIndex, colIndex);
+						const cellClass = `flex justify-center items-center bg-white text-center text-black text-6xl leading-none transition-all cursor-pointer ${
+							isWinning
+								? 'bg-green-500 text-white text-7xl font-bold scale-110'
+								: hasWinningCells
+								? 'opacity-50 bg-gray-100 text-gray-500'
+								: ''
+						}`;
 
-					return (
-						<div
-							key={`${rowIndex}-${colIndex}`}
-							className={cellClass}
-							onClick={() => onClick(rowIndex, colIndex)}
-						>
-							{cell}
-						</div>
-					);
-				}),
-			)}
-		</div>
-	);
-};
+						return (
+							<div
+								key={`${rowIndex}-${colIndex}`}
+								className={cellClass}
+								onClick={() => this.props.onClick(rowIndex, colIndex)}
+							>
+								{cell}
+							</div>
+						);
+					}),
+				)}
+			</div>
+		);
+	}
+}
 
-FieldLayout.propTypes = {
+const mapStateToProps = (state) => ({
+	field: state.field,
+});
+
+export const FieldLayout = connect(mapStateToProps)(FieldLayoutContainer);
+
+FieldLayoutContainer.propTypes = {
 	onClick: PropTypes.func,
 	isWinningCell: PropTypes.func,
 };

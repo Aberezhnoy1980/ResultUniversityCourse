@@ -1,13 +1,20 @@
-import { useDispatch } from 'react-redux';
+import { Component } from 'react';
+import { connect } from 'react-redux';
 import { restartGame } from '../../actions/';
 import { RestartBtnLayout } from '../../components';
 
-export const RestartBtn = () => {
-	const dispatch = useDispatch();
+export class RestartBtnContainer extends Component {
+	render() {
+		return (
+			<RestartBtnLayout onClick={this.props.handleRestart}>
+				Новая игра
+			</RestartBtnLayout>
+		);
+	}
+}
 
-	const handleRestart = () => {
-		dispatch(restartGame());
-	};
+const mapDispatchToProps = (dispatch) => ({
+	handleRestart: () => dispatch(restartGame()),
+});
 
-	return <RestartBtnLayout onClick={handleRestart}>Новая игра</RestartBtnLayout>;
-};
+export const RestartBtn = connect(null, mapDispatchToProps)(RestartBtnContainer);

@@ -1,33 +1,42 @@
-import { useSelector } from 'react-redux';
+import { Component } from 'react';
+import { connect } from 'react-redux';
 import { InformationLayout } from '../../components';
-import { selectIsDraw } from '../../selectors/select-is-draw';
-import { selectIsGameEnded } from '../../selectors/select-is-game-ended';
-import { selectCurrentPlayer } from '../../selectors/select-current-player';
 
-export const Information = () => {
-	const isDraw = useSelector(selectIsDraw);
-	const isGameEnded = useSelector(selectIsGameEnded);
-	const currentPlayer = useSelector(selectCurrentPlayer);
-
-	const infoMsg = isGameEnded
-		? `Победа: ${currentPlayer}`
-		: isDraw
-		? 'Ничья'
-		: `Ходит: ${currentPlayer}`;
-
-	const getContainerClass = (styles) => {
-		if (isGameEnded) return `${styles.infoContainer} ${styles.win}`;
-		if (isDraw) return `${styles.infoContainer} ${styles.draw}`;
-		return styles.infoContainer;
+export class InformationContainer extends Component {
+	getInfoMsg = () => {
+		if (this.props.isGameEnded) {
+			return `Победа: ${this.props.currentPlayer}`;
+		}
+		if (this.props.isDraw) {
+			return 'Ничья';
+		}
+		return `Ходит: ${this.props.currentPlayer}`;
 	};
 
-	return (
-		<InformationLayout
-			isGameEnded={isGameEnded}
-			isDraw={isDraw}
-			getContainerClass={getContainerClass}
-		>
-			{infoMsg}
-		</InformationLayout>
-	);
-};
+	getContainerClass = () => {
+		const baseClasses = 'flex justify-center p-2.5 text-center text-2xl font-bold rounded-lg transition-all';
+		if (this.props.isGameEnded) {
+			return `${baseClasses} bg-green-500 text-white shadow-md`;
+		}
+		if (this.props.isDraw) {
+			return `${baseClasses} bg-orange-500 text-white`;
+		}
+		return `${baseClasses} text-rebeccapurple`;
+	};
+
+	render() {
+		return (
+			<InformationLayout className={this.getContainerClass()}>
+				{this.getInfoMsg()}
+			</InformationLayout>
+		);
+	}
+}
+
+const mapStateToProps = (state) => ({
+	isDraw: state.isDraw,
+	isGameEnded: state.isGameEnded,
+	currentPlayer: state.currentPlayer,
+});
+
+export const Information = connect(mapStateToProps)(InformationContainer);

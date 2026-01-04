@@ -1,15 +1,17 @@
-import styles from './informationLayout.module.css';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export const InformationLayout = ({ getContainerClass, children }) => {
-	return (
-		<div className={getContainerClass(styles)}>
-			<span>{children}</span>
-		</div>
-	);
-};
+export class InformationLayout extends Component {
+	render() {
+		return (
+			<div className={this.props.className}>
+				<span>{this.props.children}</span>
+			</div>
+		);
+	}
+}
 
 InformationLayout.propTypes = {
-	getContainerClass: PropTypes.func,
+	className: PropTypes.string,
 	children: PropTypes.string,
 };

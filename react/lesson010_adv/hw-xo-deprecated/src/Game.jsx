@@ -1,6 +1,8 @@
+import { Component } from 'react';
 import { GameLayout } from './components';
 
-export default function Game() {
-
-	return <GameLayout />;
+export default class Game extends Component {
+	render() {
+		return <GameLayout />;
+	}
 }

@@ -1,12 +1,14 @@
+import { Component } from 'react';
 import { Information, Field, RestartBtn } from '../../components';
-import styles from './gameLayout.module.css';
 
-export const GameLayout = () => {
-	return (
-		<div className={styles.gameContainer}>
-			<Information />
-			<Field />
-			<RestartBtn />
-		</div>
-	);
-};
+export class GameLayout extends Component {
+	render() {
+		return (
+			<div className="flex flex-col gap-10">
+				<Information />
+				<Field />
+				<RestartBtn />
+			</div>
+		);
+	}
+}
